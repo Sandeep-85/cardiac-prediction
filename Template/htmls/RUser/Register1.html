@@ -1,0 +1,179 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Machine Learning Based – Cardiac Arrest Prediction in Newborn Babies | Register</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <style type="text/css">
+<!--
+.style1 {
+	color: #0EA5E9; /* clean medical/tech blue */
+	text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+	font-weight: bold;
+}
+/* Project title (Option B): blue -> teal gradient */
+.project-title {
+	color: #0EA5E9; /* fallback */
+	background: linear-gradient(90deg, #0EA5E9 0%, #2DD4BF 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+	font-weight: 800;
+}
+-->
+        </style>
+	    <head>
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {
+				background: linear-gradient(135deg, rgba(20,30,50,0.3) 0%, rgba(0,0,0,0.15) 100%), url("{% static 'bg_nicu.jpg' %}") center/cover no-repeat fixed;
+				min-height: 100vh;
+			}
+			.container-fluid { padding: 50px; }
+			/* transparent so the form can merge with background */
+			.container { padding: 50px; }
+			#title { font-family: 'Fredoka One', cursive; }
+			.text-uppercase {
+				font-family: 'Righteous', cursive;
+			}
+			/* Register area – same merge style as login */
+			.register-merge {
+				padding: 2rem 0;
+			}
+			.register-merge .style1 {
+				color: #fff;
+				text-shadow: 0 0 12px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2), 0 2px 4px rgba(0,0,0,0.8);
+				font-weight: bold;
+			}
+			.register-merge .form-group input {
+				background: rgba(255, 255, 255, 0.4);
+				border: 1px solid rgba(255, 255, 255, 0.85);
+				border-radius: 8px;
+				padding: 0.6rem 0.9rem;
+				color: #111;
+				transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+			}
+			.register-merge .form-group input::placeholder {
+				color: rgba(0, 0, 0, 0.45);
+			}
+			.register-merge .form-group input:focus {
+				background: rgba(255, 255, 255, 0.5);
+				border-color: #fff;
+				outline: none;
+				box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+			}
+			.register-merge .btn-primary {
+				background: rgba(220, 60, 60, 0.95);
+				border: 1px solid rgba(255, 255, 255, 0.7);
+				color: #fff;
+				border-radius: 8px;
+				transition: background 0.2s, box-shadow 0.2s;
+				box-shadow: 0 2px 12px rgba(220, 60, 60, 0.5);
+			}
+			.register-merge .btn-primary:hover {
+				background: rgba(255, 80, 80, 1);
+				color: #fff;
+				box-shadow: 0 4px 16px rgba(255, 80, 80, 0.6);
+			}
+			.register-merge .btn-lg {
+				background: rgba(255, 255, 255, 0.12);
+				border: 1px solid rgba(255, 255, 255, 0.9);
+				color: #fff;
+				border-radius: 8px;
+				text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+				transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+				box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+			}
+			.register-merge .btn-lg:hover {
+				background: rgba(255, 255, 255, 0.28);
+				border-color: #fff;
+				color: #fff;
+				box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+			}
+			.register-merge .btn a { text-decoration: none; color: inherit; }
+			.register-merge img { opacity: 1; filter: drop-shadow(0 0 8px rgba(255,255,255,0.4)) drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div>
+			<h2 class="text-center project-title" id="title">Machine Learning Based – Cardiac Arrest Prediction in Newborn Babies</h2>
+			 <p class="text-center">
+				<span class="style1"><small id="passwordHelpInline" class="text-muted">Cardiac arrest, newborn, early detection, intensive care unit, machine learning.</small></span></p>
+			 <hr>
+			<div class="row">
+			<div class="col-md-5">
+				<div class="register-merge">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+                            {% load static %}
+						<img src="{% static 'register_logo.svg' %}" alt="Register" style="max-height: 72px;"><br>
+						<span class="style1">REGISTER YOUR DETAILS HERE !!!						</span>
+						<div class="form-group">
+								<input type="text" name="username" id="username"  placeholder="User Name" required>
+						</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email"  placeholder="Email Address" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" id="password"  placeholder="Password" required>
+							</div>
+								<div class="form-group">
+								<input type="number" name="phoneno" id="phoneno"  placeholder="Mobile Number" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="country" id="country"  placeholder="Country" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="state" id="state"  placeholder="State" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="city" id="city"  placeholder="City" required>
+							</div>
+
+
+						<div class="form-check">
+						  <label class="form-check-label"></label>
+						</div>
+ 							<div>
+ 									  <input type="submit" class="btn btn-lg btn-primary" name="submit"  value="sign_up" >
+ 							</div>
+					  </fieldset>
+						<div><br>
+						  <button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button>
+					  </div>
+					</form>
+				</div>
+			</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>

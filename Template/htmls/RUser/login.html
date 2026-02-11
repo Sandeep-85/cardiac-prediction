@@ -1,0 +1,171 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Machine Learning Based – Cardiac Arrest Prediction in Newborn Babies</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+		<style>
+			body {
+				background: linear-gradient(135deg, rgba(20,30,50,0.35) 0%, rgba(0,0,0,0.2) 100%), url("{% static 'bg_nicu.jpg' %}") center/cover no-repeat fixed;
+				min-height: 100vh;
+			}
+			.container-fluid { padding: 50px; }
+			.container { background-color: white; padding: 50px; }
+			hr { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); margin: 1.5rem 0; }
+			#title { font-family: 'Fredoka One', cursive; }
+			.text-uppercase { font-family: 'Righteous', cursive; }
+			.style1 { 
+				color: #0EA5E9; /* clean medical/tech blue */
+				text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+				font-weight: bold;
+			}
+			/* Project title (Option B): blue -> teal gradient */
+			.project-title {
+				color: #0EA5E9; /* fallback */
+				background: linear-gradient(90deg, #0EA5E9 0%, #2DD4BF 100%);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+				font-weight: 800;
+			}
+			.style4 { color: #FF00FF; font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+			.style5 {
+				font-family: 'Righteous', cursive;
+				color: #FF0000;
+				font-weight: bold;
+			}
+			/* Login area – merges with background, no card */
+			.login-merge {
+				padding: 2rem 0;
+			}
+			.login-merge .style5 {
+				color: #fff;
+				text-shadow: 0 0 12px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2), 0 2px 4px rgba(0,0,0,0.8);
+				font-weight: bold;
+			}
+			.login-merge .form-group input {
+				background: rgba(255, 255, 255, 0.4);
+				border: 1px solid rgba(255, 255, 255, 0.85);
+				border-radius: 8px;
+				padding: 0.6rem 0.9rem;
+				color: #111;
+				transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+			}
+			.login-merge .form-group input::placeholder {
+				color: rgba(0, 0, 0, 0.45);
+			}
+			.login-merge .form-group input:focus {
+				background: rgba(255, 255, 255, 0.5);
+				border-color: #fff;
+				outline: none;
+				box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+			}
+			.login-merge .btn-primary {
+				background: rgba(220, 60, 60, 0.95);
+				border: 1px solid rgba(255, 255, 255, 0.7);
+				color: #fff;
+				border-radius: 8px;
+				transition: background 0.2s, box-shadow 0.2s;
+				box-shadow: 0 2px 12px rgba(220, 60, 60, 0.5);
+			}
+			.login-merge .btn-primary:hover {
+				background: rgba(255, 80, 80, 1);
+				color: #fff;
+				box-shadow: 0 4px 16px rgba(255, 80, 80, 0.6);
+			}
+			.login-merge .btn-outline-primary,
+			.login-merge .btn-outline-secondary {
+				background: rgba(255, 255, 255, 0.12);
+				border: 1px solid rgba(255, 255, 255, 0.9);
+				color: #fff;
+				border-radius: 8px;
+				text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+				transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+				box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+			}
+			.login-merge .btn-outline-primary:hover,
+			.login-merge .btn-outline-secondary:hover {
+				background: rgba(255, 255, 255, 0.28);
+				border-color: #fff;
+				color: #fff;
+				box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+			}
+			.login-merge .btn a { text-decoration: none; color: inherit; }
+			.login-merge img { opacity: 1; filter: drop-shadow(0 0 8px rgba(255,255,255,0.4)) drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
+		</style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div >
+			<h2 class="project-title text-center" id="title"><strong>Machine Learning Based – Cardiac Arrest Prediction in Newborn Babies</strong></h2>
+			 <p class="text-center">
+				<span class="style4"><small id="passwordHelpInline" class="text-muted">Cardiac arrest, newborn, early detection, intensive care unit, machine learning.</small></span></p>
+ 			<hr>
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center">&nbsp;</p>
+					  </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">
+					<div class="login-merge">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+						<fieldset>
+                             {% load static %}
+						<img src="{% static 'login_logo.svg' %}" alt="Login" style="max-height: 72px;">
+							<p class="style5"> Login Using Your Account: </p>
+
+							<div class="form-group">
+								<input type="text" name="username" class="form-control" placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" class="form-control" placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1" class="btn btn-md btn-primary" value="sign_in">
+							</div></br>
+
+							<p class="style5"> Login Using Your Account: </p>
+
+							<div>
+							<button type="button" class="btn btn-lg btn-outline-primary mr-2"><a href="{% url 'serviceproviderlogin' %}">SERVICE PROVIDER</a></button>
+                                <button type="button" class="btn btn-lg btn-outline-secondary"><a href="{% url 'Register1' %}">REGISTER</a></button>
+ 							</div>
+ 						</fieldset>
+				</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>
